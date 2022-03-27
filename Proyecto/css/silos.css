@@ -1,0 +1,54 @@
+body{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    color:darkslategray;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background-color: #c8c8c8;
+}
+#cabecera{
+    background-color: #FFDD33;
+    color: white;
+    margin: 0;
+    padding: 0.5em;
+    font-size: 25px;
+    font-weight: bold;
+    /*sombreado*/
+    box-shadow: 3px -4px 17px 9px rgba(0,0,0,0.21);
+    /*bordes*/
+    border-radius: 20px 20px 20px 20px;
+}
+#cabecera #logo{
+    width: 30px;
+    vertical-align: middle;
+}
+#cabecera #tagline{
+    padding: 0 0 0 1em;
+    font-weight: normal;
+    font-size: 0.7em;
+}
+#container{
+    width: 80%;
+    height: 100%;
+    bottom: 0;
+    padding: 1em;
+    text-align: left; 
+    border: 1px solid #bababa;
+    margin: 0 auto;   
+    background-color: white;
+}
+#footer{
+    /* position: absolute;
+    bottom: 0; */
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+    padding: 0.1em;
+    border-radius: 10px 10px 10px 10px;
+    background-color: gray;
+    
+}
