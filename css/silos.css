@@ -7,7 +7,7 @@ body{
     font-size: 16px;
     background-color: #c8c8c8;
 }
-#cabecera{
+header{
     background-color: #FFDD33;
     color: white;
     margin: 0;
@@ -19,14 +19,22 @@ body{
     /*bordes*/
     border-radius: 20px 20px 20px 20px;
 }
-#cabecera #logo{
-    width: 30px;
-    vertical-align: middle;
+footer i{
+    width: 500px;
+    color: black;
 }
-#cabecera #tagline{
-    padding: 0 0 0 1em;
-    font-weight: normal;
-    font-size: 0.7em;
+footer{
+    /* position: absolute;
+    bottom: 0; */
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+    padding: 0.4em;
+    border-radius: 10px 10px 10px 10px;
+    background-color: gray;
+    
 }
 #container{
     width: 80%;
@@ -38,17 +46,7 @@ body{
     margin: 0 auto;   
     background-color: white;
 }
-#footer{
-    /* position: absolute;
-    bottom: 0; */
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
+#post{
     margin: 0;
-    padding: 0.1em;
-    border-radius: 10px 10px 10px 10px;
-    background-color: gray;
-    
+    padding: 1em;
 }
