@@ -9,19 +9,20 @@ body{
 }
 header{
     background-color: #FFDD33;
-    color: white;
-    margin: 0;
-    padding: 0.5em;
-    font-size: 25px;
-    font-weight: bold;
-    /*sombreado*/
-    box-shadow: 3px -4px 17px 9px rgba(0,0,0,0.21);
     /*bordes*/
     border-radius: 20px 20px 20px 20px;
+    /*sombreado*/
+    box-shadow: 3px -4px 17px 9px rgba(0,0,0,0.21);
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.5em;
+    text-align: center;
 }
 footer i{
-    width: 500px;
     color: black;
+    width: 500px;
 }
 footer{
     /* position: absolute;
@@ -47,9 +48,12 @@ footer{
     background-color: white;
 }
 #post{
+    align-content: center;
     display: flex;
     flex-flow: column wrap;
-    align-content: center;
+    font-weight: bold;
     margin: 0;
     padding: 1em;
+    text-align: center;
+    
 }
