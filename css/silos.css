@@ -47,6 +47,9 @@ footer{
     background-color: white;
 }
 #post{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
     margin: 0;
     padding: 1em;
 }
