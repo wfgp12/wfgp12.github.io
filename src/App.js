@@ -2,6 +2,7 @@ import React from 'react';
 import { Menu } from './components/Menu';
 
 import './App.css';
+import { Footer } from './components/Footer';
 
 function App() {  
   
@@ -9,7 +10,8 @@ function App() {
     <div className="App">
       
       <div id='container'>
-          <Menu />        
+          <Menu />  
+          <Footer />      
       </div>
 
     </div>

@@ -20,14 +20,14 @@
   }
   
   .titlePage{
-    padding: 20px 10px;
+    padding: 50px 10px;
     display: flex;
     align-items: center;
   }
   .titlePage h1{
     display: flex;
-    padding: 10px;
-    margin-right: 60px;
+    padding-left: 10px;
+    margin-right: 50px;
   }
   .icon_menu{
     align-items: center;
@@ -43,7 +43,7 @@
     font-size: 35px;
   }
   .optionMenu{
-    padding: 20px 20px;
+    padding: 10px 20px;
     position: absolute;
   }
   .optionMenu a{
