@@ -1,13 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-import { Content } from './components/Content';
+import React from 'react';
+import { Menu } from './components/Menu';
 
-function App() {
+import './App.css';
+
+function App() {  
+  
   return (
     <div className="App">
+      
       <div id='container'>
-        <Content />
+          <Menu />        
       </div>
+
     </div>
   );
 }
