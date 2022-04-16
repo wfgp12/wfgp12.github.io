@@ -11,6 +11,9 @@ function App() {
       
       <div id='container'>
           <Menu />  
+          <main>
+            <img src='https://avatars.githubusercontent.com/u/85379586?v=4' id='avatar' alt='Foto'></img>
+          </main>
           <Footer />      
       </div>
 
