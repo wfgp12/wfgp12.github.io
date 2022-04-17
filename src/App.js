@@ -3,17 +3,17 @@ import { Menu } from './components/Menu';
 
 import './App.css';
 import { Footer } from './components/Footer';
+import { Home } from './components/Home';
+import { AppRouter } from './AppRouter';
 
 function App() {  
   
   return (
     <div className="App">
       
-      <div id='container'>
-          <Menu />  
-          <main>
-            <img src='https://avatars.githubusercontent.com/u/85379586?v=4' id='avatar' alt='Foto'></img>
-          </main>
+      <div id='container'> 
+          <AppRouter />
+
           <Footer />      
       </div>
 
