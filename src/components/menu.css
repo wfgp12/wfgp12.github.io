@@ -64,6 +64,7 @@
   }
   .optionMenu .option ion-icon{
     margin-right: 20px;
+    cursor: pointer;
   }
   .optionMenu .option h4{
     font-weight: 300px;

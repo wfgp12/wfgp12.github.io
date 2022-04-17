@@ -2,6 +2,7 @@ import React from 'react'
 
 export const Item = (item) => {
 
+
   return (
     <a href='#' className={item.class}>  
       <div className='option'>
