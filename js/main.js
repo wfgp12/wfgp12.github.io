@@ -80,4 +80,25 @@
       btn.setAttribute('aria-expanded', open ? 'false' : 'true');
     });
   });
+
+  var copyBtn = document.querySelector('.copy-email');
+  if(copyBtn){
+    copyBtn.addEventListener('click', function(){
+      var email = copyBtn.getAttribute('data-email');
+      navigator.clipboard.writeText(email).then(function(){
+        copyBtn.classList.add('copied');
+        copyBtn.setAttribute('title', 'Copiado');
+        copyBtn.setAttribute('aria-label', 'Copiado');
+        copyBtn.querySelector('.copy-icon').style.display = 'none';
+        copyBtn.querySelector('.check-icon').style.display = '';
+        setTimeout(function(){
+          copyBtn.classList.remove('copied');
+          copyBtn.setAttribute('title', 'Copiar email');
+          copyBtn.setAttribute('aria-label', 'Copiar email');
+          copyBtn.querySelector('.copy-icon').style.display = '';
+          copyBtn.querySelector('.check-icon').style.display = 'none';
+        }, 1800);
+      });
+    });
+  }
 })();

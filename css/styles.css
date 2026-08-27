@@ -124,6 +124,8 @@ h2{
 }
 .hero-links{display:flex;flex-wrap:wrap;gap:10px;}
 .btn{
+  -webkit-appearance:none;
+  appearance:none;
   display:inline-flex;
   align-items:center;
   gap:7px;
@@ -132,11 +134,14 @@ h2{
   padding:10px 16px;
   border-radius:6px;
   text-decoration:none;
+  background:none;
   border:1px solid var(--border-dark);
   color:var(--off);
   transition:border-color .15s, background .15s;
 }
 .btn-icon{width:14px;height:14px;flex:none;}
+.icon-only{padding:10px;cursor:pointer;}
+.copy-email.copied{border-color:var(--teal);color:var(--teal);}
 .btn:hover{border-color:var(--amber);background:rgba(227,167,59,0.08);}
 .btn.primary{background:var(--amber);color:#3A2A0A;border-color:var(--amber);font-weight:500;}
 .btn.primary:hover{background:var(--amber-dim);}
