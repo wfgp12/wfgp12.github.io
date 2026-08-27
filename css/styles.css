@@ -45,7 +45,7 @@ h2{
 
 /* ---------- HERO ---------- */
 .hero{
-  height:220vh;
+  height:150vh;
   position:relative;
   background:var(--ink);
   color:var(--off);
