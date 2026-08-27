@@ -45,10 +45,51 @@ h2{
 
 /* ---------- HERO ---------- */
 .hero{
+  height:220vh;
+  position:relative;
   background:var(--ink);
   color:var(--off);
-  padding:4rem 1.25rem 3rem;
 }
+.hero-pin{
+  position:sticky;
+  top:0;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  padding:2rem 1.25rem;
+}
+.hero-inner{
+  width:100%;
+  transform:scale(calc(1.18 - 0.18*var(--p,0))) translateY(calc(var(--p,0) * -26px));
+  transition:transform .05s linear;
+}
+.hero-reveal{
+  opacity:0;
+  transform:translateY(22px);
+  transition:opacity .6s ease, transform .6s ease;
+}
+.hero-reveal.in{opacity:1;transform:translateY(0);}
+.scroll-hint{
+  position:fixed;
+  left:50%;
+  bottom:1.5rem;
+  transform:translateX(-50%);
+  z-index:5;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.78rem;
+  color:var(--amber);
+  opacity:calc(1 - var(--p,0) * 6);
+  transition:opacity .1s linear;
+  pointer-events:none;
+}
+.scroll-hint svg{animation:hint-bounce 1.4s ease-in-out infinite;}
+@keyframes hint-bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(7px);}}
 .term{
   max-width:640px;
   margin:0 auto;
@@ -67,7 +108,7 @@ h2{
 .term-body{padding:1.75rem 1.5rem 2rem;font-family:'JetBrains Mono',monospace;font-size:0.95rem;}
 .term-line{color:var(--ash);margin:0 0 0.3rem;}
 .term-line .p{color:var(--teal);}
-.type-out{color:var(--off);white-space:pre-wrap;word-break:break-word;}
+.type-out{color:var(--off);white-space:pre-wrap;word-break:break-word;display:block;min-height:3.4em;}
 .cursor{display:inline-block;width:8px;height:1.1em;background:var(--amber);vertical-align:text-bottom;animation:blink 1s step-end infinite;}
 @keyframes blink{50%{opacity:0;}}
 .hero-title{
@@ -173,12 +214,17 @@ footer{background:var(--ink);color:var(--off);padding:4rem 1.5rem 3rem;}
 
 @media (min-width:601px){
   section{padding:5rem 1.5rem;}
-  .hero{padding:6rem 1.5rem 5rem;}
+  .hero-pin{padding:3rem 1.5rem;}
 }
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto;}
   .cursor{animation:none;}
   .layer-fill{transition:none;}
+  .hero{height:auto;}
+  .hero-pin{position:static;height:auto;}
+  .hero-inner{transform:none;}
+  .hero-reveal{opacity:1;transform:none;transition:none;}
+  .scroll-hint{display:none;}
   .pcard{transition:none;}
   .reveal{opacity:1;transform:none;transition:none;}
 }
