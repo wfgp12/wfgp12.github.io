@@ -63,17 +63,6 @@
     updateHeroScroll();
   }
 
-  var fills = document.querySelectorAll('.layer-fill');
-  var obs = new IntersectionObserver(function(entries){
-    entries.forEach(function(en){
-      if(en.isIntersecting){
-        en.target.style.width = en.target.getAttribute('data-w');
-        obs.unobserve(en.target);
-      }
-    });
-  }, {threshold:0.4});
-  fills.forEach(function(f){ obs.observe(f); });
-
   var reveals = document.querySelectorAll('.reveal');
   var revealObs = new IntersectionObserver(function(entries){
     entries.forEach(function(en){
@@ -84,4 +73,11 @@
     });
   }, {threshold:0.15});
   reveals.forEach(function(r){ revealObs.observe(r); });
+
+  document.querySelectorAll('.commit-toggle').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+    });
+  });
 })();
