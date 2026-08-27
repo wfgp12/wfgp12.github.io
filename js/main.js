@@ -34,4 +34,15 @@
     });
   }, {threshold:0.4});
   fills.forEach(function(f){ obs.observe(f); });
+
+  var reveals = document.querySelectorAll('.reveal');
+  var revealObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){
+        en.target.classList.add('is-visible');
+        revealObs.unobserve(en.target);
+      }
+    });
+  }, {threshold:0.15});
+  reveals.forEach(function(r){ revealObs.observe(r); });
 })();
